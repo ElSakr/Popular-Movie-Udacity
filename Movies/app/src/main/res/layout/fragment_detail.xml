@@ -1,0 +1,198 @@
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_swipe_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.amrsakr.movies.DetailFragment">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fafafa"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="352dp"
+                android:background="#fafafa">
+
+                <ImageView
+                    android:id="@+id/backdropImg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="299dp"
+                    android:layout_marginBottom="@dimen/poster_height"
+                    tools:ignore="ContentDescription" />
+                <ImageView
+                    android:id="@+id/poster"
+                    android:layout_width="155dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="150dp"
+                    tools:ignore="ContentDescription" />
+
+
+
+                <TextView
+                    android:id="@+id/vote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="190dp"
+                    android:layout_marginLeft="190dp"
+                    android:layout_marginTop="300dp"
+                    android:textColor="#de000000"
+                    android:textSize="45sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/divisor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="253dp"
+                    android:layout_marginLeft="253dp"
+                    android:layout_marginTop="300dp"
+                    android:text="/"
+                    android:textColor="#de000000"
+                    android:textSize="56sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/ten"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="268dp"
+                    android:layout_marginLeft="268dp"
+                    android:layout_marginTop="300dp"
+                    android:text="10"
+                    android:textColor="#de000000"
+                    android:textSize="45sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    tools:ignore="HardcodedText" />
+
+
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/orgTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:textColor="#8a000000"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Add to favourite"
+                android:id="@+id/btnFavourite"
+                android:background="@color/colorPrimary"
+                android:visibility="gone"
+                tools:ignore="HardcodedText" />
+
+
+            <TextView
+                android:id="@+id/relDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:textSize="14sp" />
+
+
+
+            <TextView
+                android:id="@+id/voteAvg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/popularity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/TrailerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:text="TRAILERS :"
+                android:textColor="#8a000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:ignore="HardcodedText" />
+
+            <ListView
+                android:id="@+id/listview_trailer"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:nestedScrollingEnabled="true"
+                android:visibility="gone"
+                tools:ignore="NestedScrolling"
+                tools:targetApi="lollipop"
+                android:fadeScrollbars="false"
+                />
+
+            <TextView
+                android:id="@+id/ReviewsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:text="REVIEWS :"
+                android:textColor="#8a000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:ignore="HardcodedText" />
+
+            <ListView
+                android:id="@+id/listview_review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:nestedScrollingEnabled="true"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:visibility="gone"
+                tools:ignore="NestedScrolling"
+                tools:targetApi="lollipop"
+                android:fadeScrollbars="false"/>
+
+
+        </LinearLayout>
+        </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>
